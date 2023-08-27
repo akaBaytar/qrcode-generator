@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>QR Code Generator</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>QR CODE GENERATOR</h1>
+      <img src="./img/qr.png" alt="Logo" width="280px" class="logo" />
+    </header>
+    <main class="container">
+      <div class="text-container">
+        <h2 class="title">QR Code Genarator</h2>
+        <p class="desc">
+          Enter your URL below to generate a QR code and download the image.
+        </p>
+        <form>
+          <input
+            type="text"
+            name="user-url"
+            id="user-url"
+            placeholder="Enter your URL"
+          />
+          <select name="img-size" id="img-size">
+            <option value="300x300">300 x 300</option>
+            <option value="500x500">500 x 500</option>
+            <option value="600x600">600 x 600</option>
+            <option value="900x900">900 x 900</option>
+          </select>
+          <button type="submit" class="download-button">
+            Download QR Image
+          </button>
+        </form>
+      </div>
+      <div class="img-container">
+        <img
+          id="qr-img"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=www.github.com/akabaytar"
+          alt="Generated QR Code"
+          width="300px"
+          height="300px"
+        />
+      </div>
+    </main>
+
+    <footer>
+      Illustration by
+      <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a>
+      from <a href="https://icons8.com/illustrations">Ouch!</a>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
